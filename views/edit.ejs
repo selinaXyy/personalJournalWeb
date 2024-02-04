@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="/style.css" rel="stylesheet"> <!--add '/' before the path, or it can be read as relative path-->
+    </head>
+
+    <body>
+        <style>
+            body{
+                background: linear-gradient(#000000, #333333, #666666);
+            }
+        </style>
+
+        <div class="saveJournal">
+            <form class="journalForm" action="/save" method="post">
+                <div class="mb-3">
+
+                <!-- Hidden fields to store original title -->
+                <input type="hidden" name="originalTitle" value="<%= CurrentTitle %>">
+
+                <!-- Title for user to modify-->
+                <input id="journalTitle" name="newTitle" value="<%= CurrentTitle %>">
+                  
+                <div id="titleHelp" class="form-text">Feel free to add a custom title for your journal entry. If you prefer not to, we'll kindly use today's date as the default title.</div>
+                </div>
+
+                <div class="mb-3">     
+                    
+                <!-- Hidden fields to store original content (change to 'input' because textarea does not have a 'type' property, 
+                    the content remain the same)-->    
+                <input type="hidden" name="originalContent" value="<%= CurrentContent %>">
+
+                <!-- Content for user to modify-->
+                <textarea id="journalContent" name="newContent"><%= CurrentContent %></textarea>
+                </div>
+
+                <div id="saveBtn"><button type="submit" class="btn btn-primary">Save</button></div>
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="newJournal.js" charset="utf-8"></script>
+    </body>
+</html>
