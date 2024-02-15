@@ -15,8 +15,8 @@ The web application is meticulously built from scratch, fluidly integrating fron
 # Getting Started
 Before you start, make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 
-### Installation
-#### Run the following commands in the terminal:          
+### Installation    
+#### Run the following commands in the terminal:
 npm init                      
 npm i express body-parser fs ejs        
 
