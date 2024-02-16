@@ -18,6 +18,6 @@ Before you start, make sure you have [Node.js](https://nodejs.org/) and [npm](ht
 ### Installation    
 #### Run the following commands in the terminal:
 npm init                      
-npm i express body-parser fs ejs        
+npm i        
 
 ### _Embark on a fulfilling journaling journey and make each entry uniquely yours. Happy journaling!📖_
