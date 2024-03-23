@@ -5,7 +5,7 @@ $(document).ready(function() {
         $("#addIcon").hide();   
         $(".journals").hide();
     
-        $("#mainHeading").fadeIn(2000,function(){
+        $("#mainHeading").fadeIn(1000,function(){
 
             setTimeout(function(){
                 $("#mainHeading").slideUp(1500, function(){
